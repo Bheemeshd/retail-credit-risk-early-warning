@@ -1,0 +1,62 @@
+{
+  "model_version": "logistic-ews-v1",
+  "model_type": "L2-regularized logistic regression",
+  "feature_names": [
+    "bureau_score",
+    "days_past_due",
+    "utilization_pct",
+    "payment_ratio",
+    "missed_payments_3m",
+    "dti_pct",
+    "income_drop_flag",
+    "hardship_flag",
+    "account_age_months",
+    "log_outstanding_balance_eur",
+    "apr_pct",
+    "is_revolving"
+  ],
+  "means": [
+    719.4324,
+    1.61496,
+    42.873108266666875,
+    0.9969203040000012,
+    0.11818666666666666,
+    40.48547199999988,
+    0.0224,
+    0.015413333333333333,
+    25.166,
+    9.588171270948711,
+    10.838711999999756,
+    0.2944
+  ],
+  "scales": [
+    35.30956268359434,
+    8.06474369493952,
+    15.490523198825194,
+    0.11279119992393491,
+    0.3679201613877347,
+    18.36048809093116,
+    0.1479805392611239,
+    0.12318994475557435,
+    13.677204051510909,
+    1.3852664464467785,
+    5.920891705229533,
+    0.45577257486598255
+  ],
+  "coefficients": [
+    -0.10251125901988681,
+    0.2695909110251187,
+    0.045376801465239626,
+    -0.12223039636743913,
+    0.13161501675932463,
+    0.11267550475965633,
+    0.06845261396305626,
+    0.08154847015636678,
+    0.04924718402122824,
+    0.025459831879045332,
+    -0.002236794375014979,
+    0.0010467248047699807
+  ],
+  "intercept": -3.1982854136475116,
+  "important_note": "Demonstration model trained on synthetic data. Scores support prioritization only and must not be used for lending or adverse-action decisions."
+}

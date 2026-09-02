@@ -1,0 +1,113 @@
+{
+  "model_version": "logistic-ews-v1",
+  "data_notice": "All observations and outcomes are synthetic; metrics are demonstrative, not production evidence.",
+  "split": {
+    "strategy": "Purged temporal split",
+    "train_start": "2024-01-01",
+    "train_end": "2025-03-01",
+    "embargo_start": "2025-04-01",
+    "embargo_end": "2025-06-01",
+    "test_start": "2025-07-01",
+    "test_end": "2025-09-01",
+    "target_horizon_months": 3,
+    "reason": "Three-month embargo reduces overlap between forward-looking train and holdout labels."
+  },
+  "row_counts": {
+    "train": 37500,
+    "embargo": 7500,
+    "test": 7500
+  },
+  "training_target_rate": 0.047733,
+  "holdout": {
+    "rows": 7500,
+    "positives": 431,
+    "target_rate": 0.057467,
+    "roc_auc": 0.695317,
+    "average_precision": 0.252679,
+    "brier_score": 0.048529,
+    "log_loss": 0.195101,
+    "top_decile": {
+      "selected_rows": 914,
+      "selected_share": 0.121867,
+      "precision": 0.177243,
+      "recall": 0.37587,
+      "lift_vs_portfolio": 3.084273
+    },
+    "operating_point": {
+      "threshold_from_train_top_decile": 0.059253,
+      "true_positive": 162,
+      "false_positive": 752,
+      "true_negative": 6317,
+      "false_negative": 269,
+      "precision": 0.177243,
+      "recall": 0.37587
+    },
+    "calibration_bins": [
+      {
+        "bin": 1,
+        "count": 750,
+        "mean_predicted_probability": 0.025123,
+        "observed_target_rate": 0.029333
+      },
+      {
+        "bin": 2,
+        "count": 750,
+        "mean_predicted_probability": 0.028543,
+        "observed_target_rate": 0.034667
+      },
+      {
+        "bin": 3,
+        "count": 750,
+        "mean_predicted_probability": 0.030844,
+        "observed_target_rate": 0.024
+      },
+      {
+        "bin": 4,
+        "count": 750,
+        "mean_predicted_probability": 0.032989,
+        "observed_target_rate": 0.028
+      },
+      {
+        "bin": 5,
+        "count": 750,
+        "mean_predicted_probability": 0.035116,
+        "observed_target_rate": 0.034667
+      },
+      {
+        "bin": 6,
+        "count": 750,
+        "mean_predicted_probability": 0.037526,
+        "observed_target_rate": 0.052
+      },
+      {
+        "bin": 7,
+        "count": 750,
+        "mean_predicted_probability": 0.040597,
+        "observed_target_rate": 0.045333
+      },
+      {
+        "bin": 8,
+        "count": 750,
+        "mean_predicted_probability": 0.045327,
+        "observed_target_rate": 0.066667
+      },
+      {
+        "bin": 9,
+        "count": 750,
+        "mean_predicted_probability": 0.055246,
+        "observed_target_rate": 0.06
+      },
+      {
+        "bin": 10,
+        "count": 750,
+        "mean_predicted_probability": 0.171681,
+        "observed_target_rate": 0.2
+      }
+    ]
+  },
+  "risk_tier_thresholds_from_training_scores": {
+    "monitor_p50": 0.03462483,
+    "high_p80": 0.04565472,
+    "critical_p95": 0.09369352
+  }
+}
