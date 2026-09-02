@@ -1,0 +1,12 @@
+{
+  "dataset_name": "Synthetic Retail Credit Early-Warning Portfolio",
+  "version": "1.0.0",
+  "provenance": "Generated locally; contains no real people, accounts, or bank data.",
+  "seed": 42,
+  "customers": 2050,
+  "loans": 2500,
+  "monthly_snapshots": 52500,
+  "start_month": "2024-01-01",
+  "end_month": "2025-09-01",
+  "simulated_target_rate": 0.048971
+}
